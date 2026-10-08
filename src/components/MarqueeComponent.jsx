@@ -5,7 +5,7 @@ import Marquee from 'react-fast-marquee';
 
 const MarqueeComponent = ({ data }) => {
     return (
-        <div className="w-full border-y border-black/10 bg-[#FBFCFA]">
+        <div className="w-full border-y border-black/5 bg-[#FBFCFA]">
             <Marquee
                 speed={180}
                 gradient={false}
@@ -14,7 +14,7 @@ const MarqueeComponent = ({ data }) => {
                 {data.map((item) => (
                     <div
                         key={item.id}
-                        className="flex items-center gap-2 border-r border-black/10 px-5 py-1"
+                        className="flex items-center gap-2 border-r border-black/5 px-5 py-1"
                     >
                         <span className="text-lg">
                             {item.image}

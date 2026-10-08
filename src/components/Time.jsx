@@ -21,7 +21,7 @@ export default function BengaliDate() {
     }, []);
 
     return (
-        <div className="text-sm font-medium text-gray-500">
+        <div className="text-s font-medium text-gray-500">
             {todayDate || 'তারিখ লোড হচ্ছে...'}
         </div>
     );

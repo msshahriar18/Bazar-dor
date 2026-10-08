@@ -4,22 +4,22 @@ import Time from './Time';
 
 const Navbar = () => {
     return (
-        <nav className="w-full border-b border-[#057C37]/15 bg-[#FBFCFA]">
-            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
+        <nav className="w-full border-b border-[#057C37]/5 bg-[#FBFCFA]">
+            <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-3.5">
 
                 <div className="flex items-center gap-2.5">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#057C37] p-2.5">
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#057C37] p-2">
                         <Image
                             src="/logo-icon.png"
                             alt="বাজার দর"
-                            width={28}
-                            height={28}
-                            className="h-7 w-7 object-contain"
+                            width={25}
+                            height={25}
+                            className="h-6 w-6 object-contain"
                             priority
                         />
                     </div>
                     <div className="flex flex-col justify-center">
-                        <h1 className="text-[19px] font-bold leading-[1.1] text-[#057C37]">
+                        <h1 className="text-[16px] font-bold leading-[1.1] text-black/90">
                             বাজার দর
                         </h1>
 
