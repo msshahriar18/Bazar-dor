@@ -4,11 +4,7 @@ import Image from 'next/image';
 const NavLinks = async () => {
     const res = await fetch(
         'https://api.api-store.workers.dev/api/bazardor/categories',
-        {
-            next: {
-                revalidate: 3600,
-            },
-        }
+
     );
 
     const navLinks = await res.json();

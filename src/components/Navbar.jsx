@@ -7,7 +7,6 @@ const Navbar = () => {
         <nav className="w-full border-b border-[#057C37]/15 bg-[#FBFCFA]">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
-                {/* Logo + Website Name */}
                 <div className="flex items-center gap-2.5">
                     <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#057C37] p-2.5">
                         <Image
@@ -30,7 +29,6 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                {/* Buttons */}
                 <div className="flex items-center gap-3">
                     <button className="rounded-lg px-5 py-2 text-sm font-semibold text-[#1d271f] transition hover:bg-[#057C37]/10">
                         সাইন ইন
