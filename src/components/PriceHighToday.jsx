@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 
 const PriceHighToday = async () => {
     const res = await fetch(
-        "https://api.api-store.workers.dev/api/bazardor/products"
+        "https://openapi.programming-hero.com/api/bazardor/products"
     );
 
     const data = await res.json();

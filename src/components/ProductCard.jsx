@@ -17,7 +17,7 @@ const ProductCard = ({ item }) => {
     const isDown = item.change?.dir === "down";
 
     return (
-        <Link href={`/product/${item.slug}`} className="block">
+        <Link href={`/product/${item.id}`} className="block">
             <div className="h-[232px] rounded-[26px] border border-[#DCE4DE] bg-[#FCFDFC] p-7 transition duration-200 hover:-translate-y-1 hover:border-[#C9D5CC] hover:shadow-md">
 
                 <div className="flex items-center gap-5">

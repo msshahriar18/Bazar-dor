@@ -1,13 +1,28 @@
+
+import React from 'react';
 import MarqueeComponent from './MarqueeComponent';
 
 const Marquee = async () => {
-    const res = await fetch(
-        'https://api.api-store.workers.dev/api/bazardor/products',
-    );
+    try {
+        const res = await fetch(
+            'https://openapi.programming-hero.com/api/bazardor/products',
+            {
+                cache: 'no-store',
+            }
+        );
 
-    const data = await res.json();
+        if (!res.ok) {
+            throw new Error('Failed to fetch bazar products');
+        }
 
-    return <MarqueeComponent data={data} />;
+        const data = await res.json();
+
+        return <MarqueeComponent data={data} />;
+    } catch (error) {
+        console.error('Marquee API error:', error);
+
+        return null;
+    }
 };
 
 export default Marquee;
