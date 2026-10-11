@@ -6,7 +6,7 @@ const NavLinks = async () => {
 
     try {
         const res = await fetch(
-            'hhttps://openapi.programming-hero.com/api/bazardor/categories',
+            'https://openapi.programming-hero.com/api/bazardor/categories',
             { cache: 'no-store' }
         );
 

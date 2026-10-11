@@ -1,10 +1,19 @@
 import React from 'react';
 import Link from 'next/link';
+import { headers } from 'next/headers';
+import { redirect } from 'next/navigation';
+import { auth } from '@/lib/auth';
 
 const ProductPage = async ({ params }) => {
     const { ProductSlug } = await params;
 
-    const res = await fetch(`https://api.api-store.workers.dev/api/bazardor/products/${ProductSlug}`);
+    const session = await auth.api.getSession({ headers: await headers() });
+
+    if (!session) {
+        redirect('/sign-in');
+    }
+
+    const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products/${ProductSlug}`);
     const data = await res.json();
 
     const toBengaliNumber = (num) => {
