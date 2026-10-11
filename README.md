@@ -1,37 +1,20 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+Bazar-dor
 
-## Getting Started
+Description
+Bazar-dor is a Bengali market price tracking app where a user can see today's price of daily products like rice, oil, vegetables, fish and meat from a real API. User can browse by category, check which products went up or down in price today, and view full price details of a product from different markets after logging in.
 
-First, run the development server:
+Technology Used
+Next.js Tailwind CSS DaisyUI Better Auth MongoDB React Hot Toast
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Features
+1.Home page: Shows a price ticker marquee with today's product prices, a section for products that went up in price, a section for products that went down in price, and a full grid of all products.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2.Category page: User can open any category from the navbar and see all products of that category, with a sort dropdown to sort by low to high or high to low price. Shows a proper message if the category does not exist.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+3.Product details page: Shows minimum, maximum and average price of a product along with a table of prices from each market. This page is protected, so user has to log in first to see it.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4.Authentication: User can sign up and sign in with email and password or with Google and GitHub, using Better Auth. After sign up user is logged in automatically, no need to sign in again.
 
-## Learn More
+5.Profile page: Logged in user can see their account info and update their name from the profile page. User can also sign out from here.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Bazar-dor
+6.Toast notifications and responsive design: Every important action like sign up, sign in, sign out and name update shows a toast message. The whole app works properly on mobile, tablet and desktop screen sizes.

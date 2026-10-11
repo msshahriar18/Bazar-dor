@@ -1,29 +1,20 @@
-'use client';
-
-import { useState, useEffect } from 'react';
+"use client";
 
 export default function BengaliDate() {
-    const [todayDate, setTodayDate] = useState('');
+    const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
+        timeZone: 'Asia/Dhaka'
+    };
 
-    useEffect(() => {
-        const today = new Date();
-
-        const options = {
-            weekday: 'long',
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric',
-            timeZone: 'Asia/Dhaka'
-        };
-
-        const formatter = new Intl.DateTimeFormat('bn-BD', options);
-        setTodayDate(formatter.format(today));
-    }, []);
+    const formatter = new Intl.DateTimeFormat('bn-BD', options);
+    const todayDate = formatter.format(new Date());
 
     return (
         <div className="text-s font-medium text-gray-500">
-            {todayDate || 'তারিখ লোড হচ্ছে...'}
+            {todayDate}
         </div>
     );
 }
-

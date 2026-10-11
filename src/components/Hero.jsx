@@ -25,9 +25,12 @@ const Hero = () => {
                         দামের পরিবর্তন এক জায়গায়।
                     </p>
 
-                    <button className="mt-8 rounded-xl bg-[#057C37] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#057C37]/90">
+                    <a
+                        href="#সব-পণ্য"
+                        className="mt-8 inline-block rounded-xl bg-[#057C37] px-7 py-3.5 text-base font-semibold text-white shadow-sm transition hover:bg-[#057C37]/90"
+                    >
                         সব পণ্য দেখুন
-                    </button>
+                    </a>
                 </div>
 
                 <div className="flex items-center justify-center">

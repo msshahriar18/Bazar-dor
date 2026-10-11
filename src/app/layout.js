@@ -33,7 +33,13 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col bg-[#FBFCFA]">
-        <Navbar />
+        <Suspense
+          fallback={
+            <div className="h-[65px] w-full border-b border-[#057C37]/5 bg-[#FBFCFA]" />
+          }
+        >
+          <Navbar />
+        </Suspense>
 
         <Suspense
           fallback={

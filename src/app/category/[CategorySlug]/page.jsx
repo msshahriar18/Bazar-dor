@@ -1,6 +1,7 @@
 "use client";
 
 import ProductCard from "@/components/ProductCard";
+import Link from "next/link";
 import React, { useState, useEffect } from "react";
 import { use } from "react";
 
@@ -18,8 +19,8 @@ const CategoryPage = ({ params }) => {
         const fetchData = async () => {
             try {
                 const [catNameRes, res] = await Promise.all([
-                    fetch(`https://api.api-store.workers.dev/api/bazardor/categories/${CategorySlug}`),
-                    fetch(`https://api.api-store.workers.dev/api/bazardor/products?category=${CategorySlug}`),
+                    fetch(`https://openapi.programming-hero.com/api/bazardor/categories/${CategorySlug}`),
+                    fetch(`https://openapi.programming-hero.com/api/bazardor/products?category=${CategorySlug}`),
                 ]);
 
                 const catNameJson = await catNameRes.json();
@@ -55,7 +56,25 @@ const CategoryPage = ({ params }) => {
     }
 
     if (!catNameData) {
-        return null;
+        return (
+            <div className="flex min-h-[70vh] flex-col items-center justify-center px-4 text-center">
+                <div className="rounded-[24px] border border-[#DCE4DE] bg-[#FCFDFC] p-10 shadow-sm max-w-md w-full">
+                    <span className="text-[64px]">🔍</span>
+                    <h1 className="mt-4 text-[28px] font-bold text-[#1D271F]">
+                        এই ক্যাটাগরি পাওয়া যায়নি
+                    </h1>
+
+                    <div className="mt-6">
+                        <Link
+                            href="/"
+                            className="inline-block rounded-full bg-[#1D271F] px-8 py-3 text-[16px] font-semibold text-white transition hover:bg-[#2e3c30]"
+                        >
+                            হোম পেজে ফিরে যান
+                        </Link>
+                    </div>
+                </div>
+            </div>
+        );
     }
 
     return (
@@ -135,7 +154,7 @@ const CategoryPage = ({ params }) => {
                                         setIsDropdownOpen(false);
                                     }}
                                     className={`w-full rounded-xl px-4 py-2.5 text-left text-sm font-medium transition ${sortOption === "high-low"
-                                        ? "bg-[#EAF5ED] .text-[#16A34A]"
+                                        ? "bg-[#EAF5ED] text-[#16A34A]"
                                         : "text-[#1D271F] hover:bg-gray-50"
                                         }`}
                                 >

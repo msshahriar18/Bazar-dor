@@ -9,7 +9,7 @@ const AllProducts = async () => {
     const data = await res.json();
 
     return (
-        <section className="bg-[#F4F7F4] px-5 py-12">
+        <section id="সব-পণ্য" className="bg-[#F4F7F4] px-5 py-12">
             <div className="mx-auto max-w-7xl">
 
                 <div className="mb-2 flex items-center gap-3">
